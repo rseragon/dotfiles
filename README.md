@@ -1,5 +1,6 @@
 # Welcome to my dotfiles cesspool
 ### Desktop Flex
-![image](https://github.com/rseragon/dotfiles/assets/29054079/704d4566-2757-40ad-91a4-e861c056cda3)
+![image](https://github.com/rseragon/dotfiles/assets/29054079/b9b9ba99-bb05-4ebc-9ed7-f9f5f2d1bb26)
+
 
 
