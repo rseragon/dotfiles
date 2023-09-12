@@ -1,0 +1,13 @@
+{
+    "python.venvPath": "/home/okami/.cache/pypoetry/virtualenvs",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/home/okami/.local/bin/black",
+
+    "rust-client.channel": "nightly",
+    "rust-analyzer.enable": true,
+    "rust-analyzer.diagnostics.enable": true,
+    "rust-analyzer.hover.documentation.enable": true,
+    "rust-analyzer.hover.links.enable": true
+}
