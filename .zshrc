@@ -107,7 +107,7 @@ alias icat="kitty +kitten icat"
 
 
 # Fix vim terminal cursor
-[[ $TERM == xterm* ]] && cursor-reset.sh
+#[[ $TERM == xterm* ]] && cursor-reset.sh
 
 
 # Compilation flags
