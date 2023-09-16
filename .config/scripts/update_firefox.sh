@@ -1,0 +1,2 @@
+#!/bin/bash
+pywalfox update
