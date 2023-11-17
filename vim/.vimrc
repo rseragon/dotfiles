@@ -33,11 +33,9 @@ set relativenumber
 " Fix annoying block cursor on alacritty
 autocmd BufWinLeave * silent !cursor-reset.sh
 
-" The escape shenanigans
+" The escape shenanigans - Only for X server
 " autocmd VimEnter * silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' 
 " autocmd VimLeave * silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock' 
-autocmd VimEnter * silent !esc-capslock.sh 1 
-autocmd VimLeave * silent !esc-capslock.sh 0
 
 
 " Search stuff
@@ -260,6 +258,9 @@ Plug 'HerringtonDarkholme/yats.vim'
 
 " REPL stuff
 Plug 'sillybun/vim-repl'
+
+" Jupyter notebook shit
+Plug 'untitled-ai/jupyter_ascending.vim'
 
 call plug#end()
 

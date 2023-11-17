@@ -113,8 +113,7 @@ nnoremap <leader>ca :lua vim.lsp.buf.code_action()<CR>
 nnoremap <S-k> :lua vim.lsp.buf.hover()<CR>
 
 " Dir Tree
-nnoremap <C-t> :NvimTreeToggle<CR>
-let g:nvim_tree_disable_netrw = 0
+"nnoremap <C-t> :NvimTreeToggle<CR>
 " inoremap <C-t> <ESC>:NvimTreeFocus<CR>
 
 " Lazygit

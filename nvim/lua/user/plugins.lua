@@ -21,8 +21,6 @@ return require('packer').startup(function()
 	})
 	use "rebelot/kanagawa.nvim"
 
-    -- icons
-    use { 'kyazdani42/nvim-web-devicons', opt = true }
 
 	-- Bar
 	-- use {'glepnir/galaxyline.nvim', branch='main', requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
@@ -117,8 +115,12 @@ return require('packer').startup(function()
 	} -- Wanna play with cuite putie ugly syntax shell shock
 	-- Lazy loading 'playground' as I don't require it much
 
-	-- The Tree (like nerdTree)
-	use 'kyazdani42/nvim-tree.lua'
+	use {
+	  'nvim-tree/nvim-tree.lua',
+	  requires = {
+	    'nvim-tree/nvim-web-devicons', -- optional
+	  },
+	}
 
 	-- Commenting
 	use 'numToStr/Comment.nvim'

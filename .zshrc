@@ -15,7 +15,7 @@ ZSH_THEME="refined"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -53,7 +53,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export PYENV_ROOT="$HOME/.pyenv"
-PATH=$PATH:$PYENV_ROOT/bin:~/.local/bin/:~/.config/scripts:~/.emacs.d/bin:~/.config/rofi/bin:/home/okami/.local/share/gem/ruby/3.0.0/bin:~/.dotnet/tools:~/go/bin:~/.cargo/bin:~/.pub-cache/bin:~/.yarn/bin:~/.detaspace/bin:/opt/*/bin
+PATH=$PATH:$PYENV_ROOT/bin:~/.local/bin/:~/.config/scripts:~/.emacs.d/bin:~/.config/rofi/bin:/home/okami/.local/share/gem/ruby/3.0.0/bin:~/.dotnet/tools:~/go/bin:~/.cargo/bin:~/.pub-cache/bin:~/.yarn/bin:~/.detaspace/bin:/opt/*/bin:/opt/android-sdk/cmdline-tools/latest/bin
 
 
 ## Useful exports
@@ -70,7 +70,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 
 ## Alias
-alias clip=' xclip -selection clipboard' # copies to clipboard
+alias clip=' wl-copy -selection clipboard' # copies to clipboard
 alias neovim="TERM=xterm-265color nvim " # alacritty was giving trouble
 alias gitcfg="git config --local user.name 'alphapanda01' && git config --local user.email 'menecho007@gmail.com'"
 alias chrome="google-chrome-stable"
@@ -79,6 +79,7 @@ alias testgitgr="git log --all --graph --abbrev-commit --decorate --format=forma
 alias vim="TERM=xterm-256color vim "
 alias bottom="btm --color nord -S  --battery -m -l  --show_table_scroll_position -T"
 alias flameshot="QT_QPA_PLATFORM=xcb flameshot"
+alias dragon-drop="GDK_BACKEND=x11 dragon-drop"
 
 # Run bpython in asyncio debug mode
 alias bpyde="PYTHONASYNCIO=1 PYTHONTRACEMALLOC=1 bpython "
@@ -106,12 +107,14 @@ alias ls="exa"
 alias icat="kitty +kitten icat"
 
 
+
 # Fix vim terminal cursor
 #[[ $TERM == xterm* ]] && cursor-reset.sh
 
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
+export MAKEFLAGS="-j$(nproc)"
 
 
 #### Other custom plugins
@@ -152,3 +155,18 @@ zinit light zsh-users/zsh-completions
 ### End of Zinit's installer chunk
 
 
+
+# bun completions
+[ -s "/home/okami/.bun/_bun" ] && source "/home/okami/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -f /opt/mambaforge/etc/profile.d/conda.sh ] && source /opt/mambaforge/etc/profile.d/conda.sh
+
+export ANDROID_SDK_ROOT='/opt/android-sdk'
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
+export PATH=$PATH:$ANDROID_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+export JAVA_HOME='/usr/lib/jvm/default'

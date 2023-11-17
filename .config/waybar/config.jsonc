@@ -7,7 +7,7 @@
     "gtk-layer-shell": true,
     "height": 0,
     "modules-left": [
-        "wlr/workspaces",
+        "hyprland/workspaces",
         "memory",
         "network",
         "temperature",
@@ -49,25 +49,24 @@
             "Foot Server": "Terminal"
         }
     },
-    "wlr/workspaces": {
-        "all-outputs": true,
+    "hyprland/workspaces": {
+        "all-outputs": false,
         "disable-scroll": false,
         "on-scroll-up": "hyprctl dispatch workspace -1",
         "on-scroll-down": "hyprctl dispatch workspace +1",
         "on-click": "activate",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
-        },
-        "sort-by-number": true
+        "sort-by-number": true,
+          "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
+          },
+          "format": "{icon}"
     },
     "tray": {
         "icon-size": 13,
@@ -90,7 +89,7 @@
     },
     "memory": {
     "interval": 30,
-    "format": "{}% ﬙"
+    "format": "{}% "
 },
 
     "clock": {
@@ -106,7 +105,7 @@
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", ""],
+        "format-icons": ["󰱋", "󰱊", "󰱌"],
         "on-scroll-up": "brightnessctl set 5%+",
         "on-scroll-down": "brightnessctl set 5%-",
         "on-click": "",
@@ -157,8 +156,8 @@
     },
     "pulseaudio#microphone": {
         "format": "{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": " Muted",
+        "format-source": " {volume}%",
+        "format-source-muted": "󰍭 Muted",
         "on-click": "pamixer --default-source -t",
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
