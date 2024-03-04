@@ -4,6 +4,7 @@ set nocompatible
 
 " system turns on filetype. force it to off before pathogen
 filetype off
+filetype plugin on
 
 " switching it on again
 filetype plugin indent on
@@ -14,7 +15,7 @@ set encoding=utf-8
 
 " selection stuff
 se mouse+=a
-set ttymouse=xterm2
+" set ttymouse=xterm2
 set ballooneval
 set balloonevalterm
 
@@ -262,6 +263,9 @@ Plug 'sillybun/vim-repl'
 " Jupyter notebook shit
 Plug 'untitled-ai/jupyter_ascending.vim'
 
+" Coment
+Plug 'preservim/nerdcommenter'
+
 call plug#end()
 
 " =======================================================
@@ -424,6 +428,7 @@ nmap <Leader>qb <Plug>VimspectorToggleBreakpoint
 " Indent line
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_enabled = 1
+autocmd Filetype json let g:indentLine_setConceal = 0
 
 " tag atuocomplete
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
@@ -472,3 +477,17 @@ autocmd Filetype python nnoremap <F11> <Esc>:REPLPDBS<Cr>
 " c-n next
 " c-p previous
 " c-y accept
+"
+" wayland clipboard
+xnoremap "+y y:call system("wl-copy", @")<cr>
+nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p
+
+" Commenting stuff
+let g:NERDCreateDefaultMappings = 1
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1

@@ -166,8 +166,8 @@ return require('packer').startup(function()
 	-- Copilot!!!
 	use {
 		"zbirenbaum/copilot.lua",
-		-- cmd = "Copilot",
 		-- event = "InsertEnter",
+		-- cmd = "Copilot",
 	}
 	-- use {
 	-- 	"zbirenbaum/copilot-cmp",

@@ -8,7 +8,7 @@ export LESS=-FX # paging using less
 #CC=gcc # clang also works
 CC=${CC:-gcc}
 
-time_cmd="/usr/bin/time -f \"\n\nTime Taken: %E\nCPU Usage: %P\nMemory: %K\"" # for measuring time
+time_cmd="time -f \"\n\nTime Taken: %E\nCPU Usage: %P\nMemory: %K\"" # for measuring time
 
 if [ $# -eq 0 ]; then
     echo -e "USAGE:\n$0 <file>.c <run type> <Optional CFLAGS>"

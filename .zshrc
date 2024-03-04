@@ -3,6 +3,12 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="refined"
 
+#For speed
+#ZSH_THEME="miloshadzic"
+
+
+ZSH_THEME="duellj"
+
 
 # Uncomment one of the following lines to change the auto-update behavior
  zstyle ':omz:update' mode auto      # update automatically without asking
@@ -26,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -80,6 +86,9 @@ alias vim="TERM=xterm-256color vim "
 alias bottom="btm --color nord -S  --battery -m -l  --show_table_scroll_position -T"
 alias flameshot="QT_QPA_PLATFORM=xcb flameshot"
 alias dragon-drop="GDK_BACKEND=x11 dragon-drop"
+alias gdb-peda='gdb -q -ex "source /usr/share/peda/peda.py"'
+alias wireshark="sudo -E wireshark"
+alias hyprland="Hyprland 2>&1 > hyprland.log"
 
 # Run bpython in asyncio debug mode
 alias bpyde="PYTHONASYNCIO=1 PYTHONTRACEMALLOC=1 bpython "
@@ -170,3 +179,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
 export JAVA_HOME='/usr/lib/jvm/default'
+
+# ROCm stuff - idk, use when required
+#export HSA_OVERRIDE_GFX_VERSION=10.3.0

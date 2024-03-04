@@ -8,6 +8,4 @@ function ctrl_c_handler() {
     xhost -si:localuser:root
 }
 
-`$@`
-
-
+sudo -e `$@`
