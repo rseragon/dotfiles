@@ -59,7 +59,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export PYENV_ROOT="$HOME/.pyenv"
-PATH=$PATH:$PYENV_ROOT/bin:~/.local/bin/:~/.config/scripts:~/.emacs.d/bin:~/.config/rofi/bin:/home/okami/.local/share/gem/ruby/3.0.0/bin:~/.dotnet/tools:~/go/bin:~/.cargo/bin:~/.pub-cache/bin:~/.yarn/bin:~/.detaspace/bin:/opt/*/bin:/opt/android-sdk/cmdline-tools/latest/bin
+PATH=$PATH:$PYENV_ROOT/bin:~/.local/bin/:~/.config/scripts:~/.emacs.d/bin:~/.config/rofi/bin:/home/okami/.local/share/gem/ruby/3.0.0/bin:~/.dotnet/tools:~/go/bin:~/.cargo/bin:~/.pub-cache/bin:~/.yarn/bin:~/.detaspace/bin:/opt/*/bin:/opt/android-sdk/cmdline-tools/latest/bin:~/.surrealdb/
+
 
 
 ## Useful exports
