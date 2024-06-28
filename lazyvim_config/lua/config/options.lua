@@ -5,3 +5,7 @@
 vim.opt.winbar = "%=%m %f"
 
 vim.opt.relativenumber = true
+
+vim.opt.guicursor = "i-ci-ve:hor30" -- Changes to '_' cursor
+
+vim.opt.clipboard = "" -- So that normal yanks don't copy into system clipboard
