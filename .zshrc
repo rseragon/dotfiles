@@ -7,7 +7,7 @@ ZSH_THEME="refined"
 #ZSH_THEME="miloshadzic"
 
 
-ZSH_THEME="duellj"
+#ZSH_THEME="duellj"
 
 
 # Uncomment one of the following lines to change the auto-update behavior
@@ -58,8 +58,8 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export PYENV_ROOT="$HOME/.pyenv"
-PATH=$PATH:$PYENV_ROOT/bin:~/.local/bin/:~/.config/scripts:~/.emacs.d/bin:~/.config/rofi/bin:/home/okami/.local/share/gem/ruby/3.0.0/bin:~/.dotnet/tools:~/go/bin:~/.cargo/bin:~/.pub-cache/bin:~/.yarn/bin:~/.detaspace/bin:/opt/*/bin:/opt/android-sdk/cmdline-tools/latest/bin:~/.surrealdb/
+#export PYENV_ROOT="$HOME/.pyenv"
+#PATH=$PATH:$PYENV_ROOT/bin:~/.local/bin/:~/.config/scripts:~/.emacs.d/bin:~/.config/rofi/bin:/home/okami/.local/share/gem/ruby/3.0.0/bin:~/.dotnet/tools:~/go/bin:~/.cargo/bin:~/.pub-cache/bin:~/.yarn/bin:~/.detaspace/bin:/opt/*/bin:/opt/android-sdk/cmdline-tools/latest/bin:~/.surrealdb/
 
 
 
@@ -101,7 +101,9 @@ alias recfgcmake="rm -rf * && cfgcmake"
 alias btcmake="cmake --build . && ctest --output-on-failure"
 
 # Some other alias
-alias vivaldi-safe="firejail --private=~/test/sandbox/ --noprofile vivaldi-snapshot"
+alias vivaldi-safe="firejail --private=~/sandbox/data/ --noprofile vivaldi-snapshot"
+alias chromium-safe=""
+alias saferun="firejail --private=~/sandbox/data/ --net=none "
 alias exa="exa --icons --color=always "
 alias rg="rg --color always "
 alias bat="bat --force-colorization --theme='Monokai Extended Origin' "
@@ -136,7 +138,7 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && `$NVM_DIR/nvm.sh --no-use --fast-reuse`  # This loads nvm
 # Pyenv shit
 # eval "$(pyenv init -)"
-eval "$(pyenv init --path --no-rehash)" # This is faster ig 100ms lag tho
+#eval "$(pyenv init --path --no-rehash)" # This is faster ig 100ms lag tho
 
 
 

@@ -8,3 +8,5 @@ vim.keymap.set("n", "<leader>sx", require("telescope.builtin").resume, {
   silent = true,
   desc = "Telescope resume",
 })
+
+vim.keymap.set({ "n", "i", "t" }, "<c-\\>", Snacks.terminal.toggle, {})

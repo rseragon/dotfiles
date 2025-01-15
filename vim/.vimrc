@@ -266,6 +266,13 @@ Plug 'untitled-ai/jupyter_ascending.vim'
 " Coment
 Plug 'preservim/nerdcommenter'
 
+" Which Key
+Plug 'liuchengxu/vim-which-key'
+
+" Coiplot
+Plug 'github/copilot.vim'
+
+
 call plug#end()
 
 " =======================================================
@@ -491,3 +498,10 @@ let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+
+
+" Copilot shit
+imap <leader>. <Plug>(copilot-next)
+imap <leader>, <Plug>(copilot-previous)
+imap <silent><script><expr> <M-l> copilot#Accept("\<CR>")

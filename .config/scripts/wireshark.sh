@@ -1,0 +1,2 @@
+xhost +local:
+sudo wireshark

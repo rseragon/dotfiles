@@ -40,6 +40,9 @@ return {
         window = {
           position = "right",
         },
+        renderer = {
+          group_empty = true,
+        },
       }
     end,
   },

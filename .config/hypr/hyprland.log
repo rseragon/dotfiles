@@ -1,0 +1,12 @@
+[LOG] Welcome to hyprpaper!
+built from commit  ()
+[CRITICAL] Cannot launch multiple instances of Hyprpaper at once!
+[2024-09-29 17:36:30.559] [info] Using configuration file /home/okami/.config/waybar/config.jsonc
+[2024-09-29 17:36:30.561] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-09-29 17:36:30.561] [info] Using CSS file /home/okami/.config/waybar/style.css
+[2024-09-29 17:36:30.565] [info] Hyprland IPC starting
+[2024-09-29 17:36:30.801] [info] Bar configured (width: 655, height: 40) for output: WL-1
+[2024-09-29 17:36:30.814] [info] Bar configured (width: 700, height: 40) for output: WL-1
+[2024-09-29 17:36:31.827] [info] Bar configured (width: 700, height: 40) for output: WL-1
+[2024-09-29 17:36:31.831] [info] Bar removed from output: WL-1
+[2024-09-29 17:36:32.835] [info] Quitting.
