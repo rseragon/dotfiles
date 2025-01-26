@@ -50,7 +50,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git poetry)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -182,6 +182,7 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
 export PATH=$PATH:$ANDROID_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
 export JAVA_HOME='/usr/lib/jvm/default'
+export PATH=$PATH:~/.local/bin/
 
 # ROCm stuff - idk, use when required
 #export HSA_OVERRIDE_GFX_VERSION=10.3.0
